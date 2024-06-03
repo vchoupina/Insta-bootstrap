@@ -3,10 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insta-bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    
-</body>
-</html>
+                                <div class="container-fluid">
+                                        <div class="container">
+                                            <a class="navbar-brand" href="https://www.instagram.com" style="display: flex; align-items: center;">
+                                                <i class="fab fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" alt="" width="110" height="100" class="img-fluid align-text-top">
+                                            </a>
+                                            
+                                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPostModal">Create a new post</button>
+
+                                            <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="newPostModalLabel">New Post</h5>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="mb-3">
+                                                                    <label for="post-title" class="col-form-label">Title:</label>
+                                                                    <input type="text" class="form-control" id="post-title">
+                                                                </div>
+                                                                <div class="mb-3">
+                                                                    <label for="post-content" class="col-form-label">Content:</label>
+                                                                    <textarea class="form-control" id="post-content"></textarea>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-success">Save changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                            
+                                                            
+                                                            <div class="dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-gear" style="color: rgb(97, 97, 97);"></i>
+                                                </a>
+
+
+                                            
+                                            
+
+
+
+
+
+
+
+
+
+
+                                                
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+
+                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                            </body>
+                            </html>
