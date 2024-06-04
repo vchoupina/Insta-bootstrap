@@ -1,74 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Insta-bootstrap</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-                                <div class="container-fluid">
-                                        <div class="container">
-                                            <a class="navbar-brand" href="https://www.instagram.com" style="display: flex; align-items: center;">
-                                                <i class="fab fa-instagram" style="font-size: 30px; margin-right: 10px;"></i>
-                                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" alt="" width="110" height="100" class="img-fluid align-text-top">
-                                            </a>
-                                            
-                                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#newPostModal">Create a new post</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="index.css" />
+    <title>Insta-Bootstrap</title>
+  </head>
 
-                                            <div class="modal fade" id="newPostModal" tabindex="-1" aria-labelledby="newPostModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="newPostModalLabel">New Post</h5>
-                                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <form>
-                                                                <div class="mb-3">
-                                                                    <label for="post-title" class="col-form-label">Title:</label>
-                                                                    <input type="text" class="form-control" id="post-title">
-                                                                </div>
-                                                                <div class="mb-3">
-                                                                    <label for="post-content" class="col-form-label">Content:</label>
-                                                                    <textarea class="form-control" id="post-content"></textarea>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-success">Save changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                            
-                                                            
-                                                            <div class="dropdown">
-                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    <i class="fa-solid fa-gear" style="color: rgb(97, 97, 97);"></i>
-                                                </a>
+  <body>   
 
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light px-5">
+      <div class="container">
+        <i class="fab fa-instagram mr-2"></i>
+        <a class="navbar-brand" href="#">Instagram</a>
+        <button type="button" class="btn btn-success justify-content-end ml-auto" data-target="#create-post-button" data-toggle="modal">
+            Create a new post
+        </button>
+        <div class="dropdown">
+          <a class="btn btn-light dropdown-toggle dropdown-toggle-split" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-cog"></i>
+          </a>
 
-                                            
-                                            
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Log Out</a>
+          </div>
+        </div>
+      </div>
+    </nav>
 
+    <div class="modal fade" id="create-post-button" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+            <div class="button-div mt-3 mb-2">
+              <button type="button" class="btn btn-outline-secondary btn-light btn-sm">
+                <i class="fas fa-camera"></i>
+              </button>
+              <button type="button" class="btn btn-outline-secondary btn-light btn-sm">
+                <i class="fas fa-map-marker-alt"></i>
+              </button>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary btn-light btn-sm" data-dismiss="modal">
+              Cancel
+            </button>
+            <button type="button" class="btn btn-success btn-sm">
+              Publish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <ul class="nav nav-pills mb-3 mt-3" id="pills-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active btn-light" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
+            <i class="fas fa-th"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link btn-light" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
+            <i class="fas fa-square"></i>
+        </a>
+      </li>
+    </ul>
 
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <div class="row no-gutters">
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_1280.jpg" alt="Foto1"/>
+          </div>
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2021/09/25/12/52/boho-art-6654957_1280.jpg" alt="Foto2"/>
+          </div>
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2024/04/13/10/20/peacock-8693634_960_720.jpg" alt="Foto3"/>
+          </div>
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2018/08/29/13/15/landscape-3639879_960_720.jpg" alt="Foto4"/>
+          </div>
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2013/06/07/06/51/tree-117582_960_720.jpg" alt="Foto5"/>
+          </div>
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2019/08/06/02/16/mountains-4387209_1280.jpg" alt="Foto6"/>
+          </div>
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2023/11/27/21/15/bird-8416208_1280.jpg" alt="Foto7"/>
+          </div>
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2024/03/04/14/17/ai-generated-8612487_1280.jpg" alt="Foto8"/>
+          </div>
+          <div class="col-4">
+            <img src="https://cdn.pixabay.com/photo/2022/06/29/15/47/mountain-7292048_1280.jpg" alt="Foto9"/>
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="pills-profile"
+        role="tabpanel"
+        aria-labelledby="pills-profile-tab"
+      >
+        <div class="container">
+          <div class="card mx-auto w-50 mb-5">
+            <div class="card-header">
+              My first photo
+              <span class="date-id">21/01</span>
+            </div>
+            <div class="card-body">
+              <img src="https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_1280.jpg" alt="Foto1"/>
+            </div>
+            <div class="card-footer">
+              <strong>120 likes</strong>
+              <p>
+                Sharing my artistic side with you!
+              </p>
+              <div class="icons">
+                <i class="far fa-heart" id="heart"></i>
+                <p id="comment">Comment...</p>
+                <i class="fas fa-ellipsis-v" id="dots"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card mx-auto w-50 mb-5">
+            <div class="card-header">
+              My second photo
+              <span class="date-id">26/02</span>
+            </div>
+            <div class="card-body">
+              <img src="https://cdn.pixabay.com/photo/2021/09/25/12/52/boho-art-6654957_1280.jpg" alt="Foto2"/>
+            </div>
+            <div class="card-footer">
+              <strong>126 likes</strong>
+              <p>
+                I love landscapes! <b>#nature</b>
+              </p>
+              <div class="icons">
+                <i class="far fa-heart" id="heart"></i>
+                <p id="comment">Comment...</p>
+                <i class="fas fa-ellipsis-v" id="dots"></i>
+              </div>
+            </div>
+          </div>
+          <div class="card mx-auto w-50">
+            <div class="card-header">
+              My third photo
+              <span class="date-id">01/03</span>
+            </div>
+            <div class="card-body">
+              <img src="https://cdn.pixabay.com/photo/2024/04/13/10/20/peacock-8693634_960_720.jpg" alt="Foto3"/>
+            </div>
+            <div class="card-footer">
+              <strong>1000 likes</strong>
+              <p>
+                Every detail, every color is really impressive...
+              </p>
+              <div class="icons">
+                <i class="far fa-heart" id="heart"></i>
+                <p id="comment">Comment...</p>
+                <i class="fas fa-ellipsis-v" id="dots"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"
+      integrity="sha512-YSdqvJoZr83hj76AIVdOcvLWYMWzy6sJyIMic2aQz5kh2bPTd9dzY3NtdeEAzPp/PhgZqr4aJObB3ym/vsItMg=="
+      crossorigin="anonymous"
+    ></script>
 
-
-
-
-
-
-                                                
-                                            </div>
-                                        </div>
-                                    </nav>
-                                </div>
-
-                                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-                            </body>
-                            </html>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
